@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css linkn  -->
+    <!-- <link rel="stylesheet" href="CSS/Createpage.css"> -->
+    <!-- Bootstrape link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- icon link  -->
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Practice</title>
+
+    <style>
+         :root {
+            /* Colors */
+            --bg-light: #f0f2f5;
+            --bg-dark: #18191a;
+            --highlight-gray: #e4e6e8;
+            --white-primary: #fff;
+            --dark-primary: #333;
+            --dark-gray: #65676b;
+            --less-dark-gray: #606770;
+            --gray-border: #ced0d4;
+            --primary-color: #426bb1;
+            --less-primary-color: #d7e4f2;
+            --blue-primary: #0d6efd;
+            --green-primary: #198754;
+            --danger-primary: #dc3545;
+            --first-color: #1A73E8;
+            --input-color: #80868B;
+            --border-color: #DADCE0;
+            --normal-font-size: 1rem;
+            --small-font-size: .75rem;
+        }
+        /* font  link*/
+        
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+        body {
+            background-color: var( --bg-light);
+            /* overflow-x: hidden; */
+            font-family: 'Raleway', sans-serif;
+        }
+        /* main section  */
+        
+        .main {
+            display: grid;
+            grid-template-columns: [first] 26% [line2] auto [end];
+        }
+        
+        .Create-invites {
+            margin-bottom: 1rem;
+        }
+        
+        .Create-side {
+            background-color: var(--white-primary);
+            box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+            height: 100%;
+            padding: 15px;
+        }
+        
+        .iconify {
+            width: 2rem;
+        }
+        
+        .Create-start {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .Create-pages {
+            display: flex;
+            column-gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .Create-Create-pages-icon {
+            background-color: var(--blue-primary);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            color: white;
+        }
+        
+        .Create-ptofile {
+            margin-left: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .profile-pic {
+            width: 6%;
+        }
+        
+        .Create-Crate-button1 {
+            display: flex;
+            align-items: center;
+            background-color: var(--white-primary);
+            height: 50px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+            margin-top: 1rem;
+            white-space: nowrap;
+        }
+        
+        .btn-create2 {
+            background-color: rgba(191, 248, 248, 0.383);
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            color: var(--blue-primary);
+        }
+        
+        .Create-Crate-button {
+            display: flex;
+            align-items: center;
+            background-color: var(--white-primary);
+            height: 50px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+            margin-top: 1rem;
+            white-space: nowrap;
+        }
+        
+        .btn-create {
+            background-color: rgba(191, 248, 248, 0.383);
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            color: var(--blue-primary);
+        }
+        
+        .Create-modify-icon {
+            background-color: var(--highlight-gray);
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+        }
+        
+        .active {
+            bottom: 12rem;
+            right: 92%;
+            position: absolute;
+        }
+        
+        .active p {
+            font-size: 12px;
+            font-weight: 500;
+        }
+        /* middle mobile bar  */
+        
+        .Create-mobile-bar {
+            display: flex;
+            column-gap: 2rem;
+        }
+        
+        .mobile-bar-Create-pages {
+            display: flex;
+            align-items: center;
+            column-gap: .3rem;
+            margin-top: 1rem;
+            border: 1px solid darkgray;
+            padding: 5px;
+            border-radius: 30px;
+            width: 143px;
+            /* transition: ease-out 0.3s; */
+            background: linear-gradient(to left, #fff 50%, #65a2df 50%) right;
+            background-size: 200%;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .mobile-bar-Create-pages:hover {
+            background-position: left;
+        }
+        
+        .mobile-bar-Create-pages:hover strong {
+            color: #fff;
+        }
+        /* middle section create pages  */
+        
+        .Create-middle-section {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .middle-Create {
+            margin-top: 2rem;
+        }
+        /* Group   Create pages  */
+        
+        .New-page-create {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .GroupCreate {
+            box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+            height: 50vh;
+            border-radius: 8px;
+        }
+        
+        .GroupPages {
+            display: flex;
+            gap: 1rem;
+            padding-block-start: 1rem;
+            margin-left: 1rem;
+        }
+        
+        .Pagesgroup {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+        
+        .create-btn {
+            border: none;
+            color: var(--blue-primary);
+        }
+        
+        .GroupCreate hr {
+            margin: 0;
+        }
+        
+        .GroupPages>button {
+            border: none;
+            background-color: white;
+            font-weight: 500;
+        }
+        
+        .middle-form-btn {
+            border: 1px soid var(--border-color);
+        }
+        /* Modal design  */
+        
+        .coverImage {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .coverImage img {
+            border-radius: 5px;
+        }
+        
+        .profile {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .updateCover {
+            position: absolute;
+            top: 17px;
+            right: 12px;
+        }
+        
+        .propic {
+            width: 100px;
+        }
+        
+        .updateprofile {
+            position: absolute;
+            left: 4.5rem;
+            top: 0;
+        }
+        /* input dropdown  */
+        /* .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+        
+        .input_box select {
+            word-wrap: normal;
+            width: 100%;
+            height: 48px;
+            border-radius: 5px;
+            outline: none;
+            margin-right: 1rem;
+            border-radius: .5rem;
+            border: 1px solid var(--border-color);
+            font-size: var(--normal-font-size);
+            padding: 0rem 1rem;
+            opacity: .65;
+        }
+        /* input form  */
+        
+        .input_box {
+            position: relative;
+            height: 48px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .input_item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: none;
+            z-index: 1;
+            outline: none;
+            padding: 1rem;
+            border-radius: .5rem;
+            border: 1px solid var(--border-color);
+            font-size: var(--normal-font-size);
+        }
+        
+        .form_lebel {
+            position: absolute;
+            padding: 0.25rem;
+            left: 1rem;
+            top: .5rem;
+            background-color: #fff;
+            transition: .3s;
+            color: var(--input-color);
+            font-size: var(--normal-font-size);
+        }
+        
+        .input_item:focus+.form_lebel {
+            top: -.8rem;
+            left: .8rem;
+            color: var(--first-color);
+            font-size: var(--small-font-size);
+            font-weight: 500;
+            z-index: 10;
+        }
+        
+        .input_item :not(:placeholder-shown).input_item :not(:focus)+.form_lebel {
+            top: -.5rem;
+            left: .8rem;
+            font-size: var(--small-font-size);
+            font-weight: 500;
+            z-index: 10;
+        }
+        
+        .input_item :focus {
+            border: 1.5px solid var(--first-color);
+        }
+        
+        .Input_form {
+            margin-top: 3rem;
+        }
+        /* modal poup  */
+        
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+        
+        .popup.active {
+            display: block;
+        }
+        
+        .popup-container {
+            position: absolute;
+            top: 6%;
+            left: 37%;
+            /* transform: translate(-50%, -50%); */
+            background-color: white;
+            padding: 2rem;
+            transform-origin: top;
+            animation: bounce .7s ease-in-out;
+            width: 50%;
+            height: auto;
+            box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+            border-radius: 10px;
+        }
+        /* @keyframes bounce {
+            10% {
+                height: 200px;
+                width: 200px;
+            }
+            50% {
+                width: 150px;
+                height: 200px;
+                transform: translateY(-250px);
+            }
+        } */
+        
+        @keyframes bounce {
+            0% {
+                transform: translateY(-500px);
+            }
+            40% {
+                transform: translateY(0)
+            }
+            75% {
+                transform: translateY(-40px);
+            }
+            100% {
+                transform: translateY(0)
+            }
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: 800;
+            line-height: 20px;
+            background-color: brown;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .modal-btn {
+            border: 1px solid var(--border-color);
+            padding: .4rem 17px;
+            border-radius: 5px;
+        }
+        /* media query  */
+        
+        @media screen and (min-width: 576px) {
+            .modal-form {
+                max-width: 48rem !important;
+            }
+        }
+        /* middle section  */
+        
+        @media screen and (min-width: 992px) {
+            .Create-mobile-bar {
+                visibility: hidden;
+                display: none;
+                margin-top: -2rem;
+            }
+            /* .middle-card{
+          width: 80%;
+        } */
+        }
+        
+        @media screen and (max-width: 991px) {
+            .main {
+                display: grid;
+                grid-template-columns: [first] 0% [line2] auto [end];
+            }
+            .Create-side {
+                visibility: hidden;
+                display: none;
+            }
+            .Create-invites h4 {
+                display: none;
+            }
+            .popup-container {
+                position: absolute;
+                top: 12%;
+                left: 10%;
+                /* transform: translate(-50%, -50%); */
+                background-color: white;
+                padding: 2rem;
+                transform-origin: top;
+                animation: bounce .7s ease-in-out;
+                width: 80%;
+                /* height: 86vh; */
+                box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+                border-radius: 10px;
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            .create-btn {
+                display: none;
+            }
+            .btn-create2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="main">
+        <div class="MainSection">
+            <div class="Create-side">
+                <div class="Create-side-design">
+                    <div class="Create-start">
+                        <h3>Pages</h3>
+                        <span class="iconify" data-icon="mdi:cog-sync-outline"></span>
+                    </div>
+                </div>
+
+
+                <div class="Create-pages">
+                    <span class="iconify Create-Create-pages-icon" data-icon="mdi:flag-variant"></span>
+                    <div>
+                        <strong>Your pages</strong>
+                    </div>
+                </div>
+
+
+                <div class="Create-ptofile">
+                    <div class="Create-pages">
+                        <img class=" rounded img-fluid profile-pic" src="images/profile.png" alt="">
+                        <div>
+                            <strong>Your pages</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Create-Crate-button">
+                    <button type="button" class="btn-create " onclick="OpenPopUp()"> + Create new pages</button>
+
+                </div>
+                <hr>
+
+                <div class="Create-ptofile">
+                    <div class="Create-pages">
+                        <span class="iconify Create-modify-icon" data-icon="mdi:handshake-outline"></span>
+                        <div>
+                            <strong>Business suit</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Create-ptofile">
+                    <div class="Create-pages">
+                        <span class="iconify Create-modify-icon" data-icon="mdi:account-child-circle"></span>
+                        <div>
+                            <strong>Discover</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="Create-ptofile">
+                    <div class="Create-pages">
+                        <span class="iconify Create-modify-icon" data-icon="mdi:thumb-up"></span>
+                        <div>
+                            <strong>liked pages</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="Create-ptofile">
+                    <div class="Create-pages">
+                        <span class="iconify Create-modify-icon" data-icon="mdi:account-plus-outline"></span>
+                        <div>
+                            <strong style="margin-block-start: 0  !important; margin-block-end: 0 !important;">Invites</strong>
+                            <p style="margin-block-start: 0 !important; font-size: .9rem;">114 new</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- middle section  -->
+        <div class="Create-middle-section">
+            <div class="middle-Create">
+                <!-- mobile bar  -->
+                <div class="Create-mobile-bar">
+
+                    <div class="mobile-bar-Create-pages">
+                        <span class="iconify pages-icon" data-icon="mdi:flag-variant"></span>
+                        <div>
+                            <strong style="white-space: nowrap;">Your pages</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-bar-Create-pages">
+                        <span class="iconify modify-icon" data-icon="mdi:account-child-circle"></span>
+                        <div>
+                            <strong style="white-space: nowrap;">Discover</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-bar-Create-pages">
+                        <span class="iconify modify-icon" data-icon="mdi:thumb-up"></span>
+                        <div>
+                            <strong style="white-space: nowrap;">Like page</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="Create-invites">
+                    <h4><strong>Create pages</strong></h4>
+
+                </div>
+
+
+
+                <!-- create group pages  -->
+                <div class=" GroupCreate">
+                    <div class="New-page-create">
+                        <div class="GroupPages ">
+                            <button class="text-muted">Your pages</button>
+                            <button class="text-muted">Requested</button>
+
+                        </div>
+                        <button class="middle-form-btn"> + Create page</button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <div class="popup " id="popUp">
+        <div class="popup-container ">
+            <h5>Create new page</h5>
+            <hr>
+
+            <div class="groupForm">
+                <div class="coverImage">
+                    <div class="cover">
+                        <img src="images/pic.jpg.jpg" class="img-fluid" alt="" srcset="">
+                        <span class="iconify updateCover" data-icon="mdi:camera-wireless"></span>
+                    </div>
+
+                    <div class="profile">
+                        <img class="propic img-fluid" src="images/pro.jpg" alt="" srcset="">
+                        <span class="iconify updateprofile" data-icon="mdi:camera-wireless"></span>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="Input_form">
+                <div class="input_box">
+                    <input class="input_item" name="text" type="text">
+                    <label class="form_lebel" for="">Page name </label>
+                </div>
+                <div class="input_box">
+                    <select>
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                          <option>Option 4</option>
+                          <option>Option 5</option>
+                        </select>
+                </div>
+                <div class="input_box">
+
+                    <textarea class="input_item" name="comment" form="usrform"></textarea>
+                    <label class="form_lebel" for=""> Description</label> <br>
+                </div>
+            </div>
+            <div class="popup-close" onclick="Close()">&times;</div>
+            <div class="modal-footer">
+                <button class="modal-btn">Create</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- <button onclick="OpenPopUp()">Open Popup</button> -->
+
+    <script>
+        function OpenPopUp() {
+            document.getElementById('popUp').classList.add('active');
+
+        };
+
+        function Close() {
+            document.getElementById('popUp').classList.remove('active');
+
+        };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+ /* mandatory section  */
+ 
+ :root {
+     /* Colors */
+     --bg-light: #f0f2f5;
+     --bg-dark: #18191a;
+     --highlight-gray: #e4e6e8;
+     --white-primary: #fff;
+     --dark-primary: #333;
+     --dark-gray: #65676b;
+     --less-dark-gray: #606770;
+     --gray-border: #ced0d4;
+     --primary-color: #426bb1;
+     --less-primary-color: #d7e4f2;
+     --blue-primary: #0d6efd;
+     --green-primary: #198754;
+     --danger-primary: #dc3545;
+     --first-color: #1A73E8;
+     --input-color: #80868B;
+     --border-color: #DADCE0;
+     --normal-font-size: 1rem;
+     --small-font-size: .75rem;
+ }
+ /* font  link*/
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+ body {
+     background-color: var( --bg-light);
+     overflow-x: hidden;
+     font-family: 'Raleway', sans-serif;
+ }
+ /* main section  and general side nav bar */
+ 
+ .main {
+     display: grid;
+     grid-template-columns: [first] 26% [line2] auto [end];
+ }
+ 
+ .General-side {
+     background-color: var(--white-primary);
+     box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+     height: 100%;
+     padding: 15px;
+ }
+ 
+ .iconify {
+     width: 2rem;
+ }
+ 
+ .General-start {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ .General-pages {
+     display: flex;
+     column-gap: 1rem;
+     margin-top: 1rem;
+ }
+ 
+ .General-GeneralPages-icon {
+     background-color: var(--blue-primary);
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     color: white;
+ }
+ 
+ .General-ptofile {
+     margin-left: 1rem;
+     margin-top: 1rem;
+ }
+ 
+ .profile-pic {
+     width: 6%;
+ }
+ 
+ .Create-Crate-button1 {
+     display: flex;
+     align-items: center;
+     background-color: var(--white-primary);
+     height: 50px;
+     padding: 10px;
+     border-radius: 5px;
+     box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+     margin-top: 1rem;
+     white-space: nowrap;
+ }
+ 
+ .btn-general2 {
+     background-color: rgba(191, 248, 248, 0.383);
+     width: 100%;
+     border: none;
+     border-radius: 5px;
+     font-weight: 500;
+     color: var(--blue-primary);
+ }
+ 
+ .Create-Crate-button {
+     display: flex;
+     align-items: center;
+     background-color: var(--white-primary);
+     height: 50px;
+     padding: 10px;
+     border-radius: 5px;
+     box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+     margin-top: 1rem;
+     white-space: nowrap;
+ }
+ 
+ .btn-general {
+     background-color: rgba(191, 248, 248, 0.383);
+     width: 100%;
+     border: none;
+     border-radius: 5px;
+     font-weight: 500;
+     color: var(--blue-primary);
+ }
+ 
+ .General-modify-icon {
+     background-color: var(--highlight-gray);
+     border-radius: 50%;
+     width: 25px;
+     height: 25px;
+ }
+ 
+ .active {
+     bottom: 12rem;
+     right: 92%;
+     position: absolute;
+ }
+ 
+ .active p {
+     font-size: 12px;
+     font-weight: 500;
+ }
+ /* middle section and mobile nab  bar  */
+ 
+ .General-mobile-bar {
+     display: flex;
+     column-gap: 2rem;
+     overflow-x: auto;
+ }
+ 
+ .mobile-bar-General-pages {
+     display: flex;
+     align-items: center;
+     column-gap: .3rem;
+     margin-top: 1rem;
+     border: 1px solid darkgray;
+     padding: 5px;
+     border-radius: 30px;
+     width: 143px;
+     /* transition: ease-out 0.3s; */
+     background: linear-gradient(to left, #fff 50%, #65a2df 50%) right;
+     background-size: 200%;
+     transition: all 0.3s ease-in-out;
+ }
+ 
+ .mobile-bar-General-pages:hover {
+     background-position: left;
+ }
+ 
+ .mobile-bar-General-pages:hover strong {
+     color: #fff;
+ }
+ /* middle section create pages  */
+ 
+ .General-middle-section {
+     width: 60%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ /*generaal settings  input section  */
+ 
+ .Settings-Form {
+     border: 1px solid var(--border-color);
+     padding: 20px;
+     box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%), 0 0px 4px 0 rgb(0 0 0 / 19%);
+     border-radius: 5px;
+     margin-top: 1rem;
+ }
+ 
+ .first-name {
+     font-weight: 500 !important;
+     width: 100px;
+ }
+ 
+ .settings-save {
+     display: flex;
+     justify-content: end;
+ }
+ 
+ .Save-btn {
+     width: 85px;
+     border: none;
+     background: var(--blue-primary);
+     font-weight: 500;
+     font-size: 1.2rem;
+     border-radius: 5px;
+     color: var(--white-primary);
+     /* display: flex; */
+     height: 35px;
+ }
+ /* middle section  */
+ /* responsive medis query  */
+ 
+ @media screen and (min-width: 992px) {
+     .General-mobile-bar {
+         visibility: hidden;
+         display: none;
+         margin-top: -2rem;
+     }
+ }
+ 
+ @media screen and (max-width: 991px) {
+     .main {
+         display: grid;
+         grid-template-columns: [first] 0% [line2] auto [end];
+     }
+     .General-side {
+         visibility: hidden;
+         display: none;
+     }
+     .General-invites h4 {
+         display: none;
+     }
+     .General-middle-section {
+         width: 100%;
+         margin-left: auto;
+         margin-right: auto;
+         position: absolute;
+     }
+ }
+ 
+ @media screen and (min-width: 992px) {
+     .create-btn {
+         display: none;
+     }
+     .btn-general2 {
+         display: none;
+     }
+ }
